@@ -12,11 +12,15 @@ const TipsScreen = () => {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.scrollContent}
       >
-        <View style={styles.header}>
-          <Text style={styles.title}>Hydration Tips</Text>
-          <Text style={styles.subtitle}>
-            Learn about proper hydration and its benefits
-          </Text>
+        {/* Header */}
+        <View style={styles.headerContainer}>
+          <View style={styles.header}>
+              <Text style={styles.title}>Hydration Tips</Text>
+              <Text style={styles.subtitle}>
+              Learn about proper hydration and its benefits
+              </Text>
+            <View style={styles.divider} />
+          </View>
         </View>
 
         {/* Tips Cards */}
@@ -135,21 +139,37 @@ const styles = StyleSheet.create({
   scrollContent: {
     paddingBottom: 20,
   },
+  headerContainer: {
+    paddingVertical: SIZES.margin,
+    marginBottom: SIZES.margin,
+    backgroundColor: COLORS.neutral,
+    borderRadius: 20, // ขอบมุมมน
+    shadowColor: '#000',
+    shadowOffset: { width: 4, height: 4 },
+    shadowOpacity: 0.2,
+    shadowRadius: 6,
+  },
   header: {
     paddingHorizontal: SIZES.marginLarge,
-    paddingTop: SIZES.marginLarge,
-    paddingBottom: SIZES.margin,
+    alignItems: 'center',
   },
   title: {
     ...FONTS.bold,
     fontSize: SIZES.xxl,
-    color: COLORS.text,
+    color: COLORS.primary,
   },
   subtitle: {
     ...FONTS.regular,
-    fontSize: SIZES.medium,
-    color: COLORS.textLight,
-    marginTop: SIZES.margin / 2,
+    fontSize: SIZES.font,
+    color: COLORS.darkGray,
+    marginTop: 4,
+  },
+  divider: {
+    height: 2,
+    backgroundColor: COLORS.primary,
+    width: '100%',
+    marginVertical: SIZES.margin,
+    alignSelf: 'stretch',
   },
   tipCard: {
     backgroundColor: COLORS.white,
@@ -263,4 +283,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default TipsScreen; 
+export default TipsScreen;

@@ -197,6 +197,7 @@ const StatsScreen = () => {
           <View style={styles.header}>
             <Text style={styles.title}>Statistics</Text>
             <Text style={styles.subtitle}>Track your hydration progress</Text>
+            <View style={styles.divider} />
           </View>
         </View>
 
@@ -387,29 +388,36 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: COLORS.background,
   },
-  scrollContent: {
-    paddingBottom: 24,
-  },
   headerContainer: {
-    backgroundColor: COLORS.primary + '10',
-    paddingTop: SIZES.marginLarge,
-    paddingBottom: SIZES.margin,
-    borderBottomLeftRadius: 24,
-    borderBottomRightRadius: 24,
+    paddingVertical: SIZES.margin,
     marginBottom: SIZES.margin,
+    backgroundColor: COLORS.neutral,
+    borderRadius: 20, // ขอบมุมมน
+    shadowColor: '#000',
+    shadowOffset: { width: 4, height: 4 },
+    shadowOpacity: 0.2,
+    shadowRadius: 6,
   },
   header: {
     paddingHorizontal: SIZES.marginLarge,
+    alignItems: 'center',
   },
+  divider: {
+    height: 2,
+    backgroundColor: COLORS.primary,
+    width: '100%',
+    marginVertical: SIZES.margin,
+    alignSelf: 'stretch',
+  }, 
   title: {
     ...FONTS.bold,
     fontSize: SIZES.xxl,
-    color: COLORS.text,
+    color: COLORS.primary,
   },
   subtitle: {
     ...FONTS.regular,
     fontSize: SIZES.font,
-    color: COLORS.textLight,
+    color: COLORS.darkGray,
     marginTop: 4,
   },
   todaySummaryCard: {

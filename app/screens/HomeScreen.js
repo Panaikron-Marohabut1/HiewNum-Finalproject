@@ -134,7 +134,7 @@ const HomeScreen = () => {
       >
         {/* Header */}
         <View style={styles.header}>
-          <Text style={styles.title}>Water Tracker</Text>
+          <Text style={styles.title}>🥤Hiew-Num</Text>
           <Text style={styles.subtitle}>
             {moment().format('dddd, MMMM D')}
           </Text>
@@ -148,7 +148,7 @@ const HomeScreen = () => {
           <View style={styles.reminderContainer}>
             <MaterialCommunityIcons name="bell-ring-outline" size={20} color={COLORS.primary} />
             <Text style={styles.reminderText}>
-              Next reminder: {nextReminder}
+              Next reminder : {nextReminder}
             </Text>
           </View>
         )}
@@ -293,20 +293,29 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
   },
   header: {
-    paddingHorizontal: SIZES.marginLarge,
-    paddingTop: SIZES.marginLarge,
-    paddingBottom: SIZES.margin,
+    marginTop: 40,
+    marginHorizontal: 20,
+    backgroundColor: '#FFFFFF',
+    padding: 24,
+    borderRadius: 24,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.08,
+    shadowRadius: 12,
+    elevation: 8,
+    position: 'relative', // สำหรับ subtitle วางแบบ absolute
   },
   title: {
-    ...FONTS.bold,
-    fontSize: SIZES.xxl,
-    color: COLORS.text,
+    fontSize: 34,
+    fontWeight: '800',
+    color: '#0B2545',
   },
   subtitle: {
-    ...FONTS.regular,
-    fontSize: SIZES.medium,
-    color: COLORS.textLight,
-    marginTop: SIZES.margin / 2,
+    fontSize: 14,
+    fontWeight: '400',
+    color: '#5D737E',
+    marginTop: 8, // เว้นห่างจาก title
+    alignSelf: 'flex-end', // ดันไปขวาแทน
   },
   reminderContainer: {
     flexDirection: 'row',
@@ -316,7 +325,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: SIZES.marginLarge,
     borderRadius: SIZES.radius,
     marginHorizontal: SIZES.marginLarge,
-    marginVertical: SIZES.margin,
+    marginVertical: -7,
     ...SHADOWS.small,
   },
   reminderText: {
@@ -333,10 +342,10 @@ const styles = StyleSheet.create({
     ...FONTS.bold,
     fontSize: SIZES.large,
     color: COLORS.text,
-    marginBottom: SIZES.margin,
+    marginBottom: SIZES.margin / 2, // <<< ลดลงครึ่งนึง
   },
   containerList: {
-    paddingVertical: SIZES.margin,
+    paddingVertical: SIZES.margin / 2, // <<< ลดเหมือนกัน
     paddingHorizontal: SIZES.marginLarge - 5,
   },
   customButton: {

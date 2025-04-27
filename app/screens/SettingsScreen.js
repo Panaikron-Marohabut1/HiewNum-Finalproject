@@ -185,9 +185,15 @@ const SettingsScreen = () => {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.scrollContent}
       >
+      <View style={styles.headerContainer}>
         <View style={styles.header}>
           <Text style={styles.title}>Settings</Text>
+          <Text style={styles.subtitle}>Manage your preferences</Text>
+          <View style={styles.divider} />
         </View>
+      </View>
+      
+
 
         {/* Water Goal Section */}
         <View style={styles.section}>
@@ -336,15 +342,30 @@ const styles = StyleSheet.create({
   scrollContent: {
     paddingBottom: 30,
   },
+  headerContainer: {
+    paddingVertical: SIZES.margin,
+    marginBottom: SIZES.margin,
+    backgroundColor: COLORS.neutral,
+    borderRadius: 20, // ขอบมุมมน
+    shadowColor: '#000',
+    shadowOffset: { width: 4, height: 4 },
+    shadowOpacity: 0.2,
+    shadowRadius: 6,
+  },
   header: {
     paddingHorizontal: SIZES.marginLarge,
-    paddingTop: SIZES.marginLarge,
-    paddingBottom: SIZES.margin,
+    alignItems: 'center',
   },
   title: {
     ...FONTS.bold,
     fontSize: SIZES.xxl,
-    color: COLORS.text,
+    color: COLORS.primary,
+  },
+  subtitle: {
+    ...FONTS.regular,
+    fontSize: SIZES.font,
+    color: COLORS.darkGray,
+    marginTop: 4,
   },
   section: {
     paddingHorizontal: SIZES.marginLarge,
@@ -401,9 +422,11 @@ const styles = StyleSheet.create({
     flex: 0.5,
   },
   divider: {
-    height: 1,
-    backgroundColor: COLORS.border,
+    height: 2,
+    backgroundColor: COLORS.primary,
+    width: '100%',
     marginVertical: SIZES.margin,
+    alignSelf: 'stretch',
   },
   modalOverlay: {
     flex: 1,

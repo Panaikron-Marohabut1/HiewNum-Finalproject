@@ -73,6 +73,7 @@ const WaterProgress = () => {
           </View>
         </View>
       </View>
+      <View style={styles.divider} />
     </View>
   );
 };
@@ -92,6 +93,14 @@ const styles = StyleSheet.create({
     marginBottom: SIZES.marginLarge,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  divider: {
+    marginTop: 40,
+    height: 2,
+    backgroundColor: COLORS.primary,
+    width: '80%',
+    marginVertical: SIZES.margin,
+    alignSelf: 'center',
   },
   gradientBackground: {
     position: 'absolute',

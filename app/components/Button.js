@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     borderWidth: 1,
     borderColor: COLORS.primary,
+    shadowColor: 'transparent',
   },
   textButton: {
     backgroundColor: 'transparent',

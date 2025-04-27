@@ -16,7 +16,7 @@ export const AppProvider = ({ children }) => {
     enabled: true,
     startTime: '08:00',
     endTime: '22:00',
-    frequency: 60, // minutes
+    frequency: 120, // minutes
   });
 
   // Water tracking state
