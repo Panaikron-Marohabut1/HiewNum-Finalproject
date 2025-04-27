@@ -1,11 +1,11 @@
 # Take-home Assignment Submission
 
 ## ข้อมูลส่วนตัว
-- **ชื่อ - นามสกุล (Full Name):** Panaikron Marohabut
+- **ชื่อ - นามสกุล (Full Name):** Panaikron Marohabut (นายปณัยกร มะโรหะบุตร์)
 - **รหัสนักศึกษา (Student ID):** 6631503126
 - **ชื่อแอป (App Name):** Hiew-Num (หิวน้ำ)
 - **Framework ที่ใช้:** React Native with Expo
-- **ลิงก์ GitHub Repository:** (กรอกที่นี่)
+- **ลิงก์ GitHub Repository:** [Github](https://github.com/Panaikron-Marohabut1/HiewNum-Finalproject)
 - **ลิงก์ไฟล์ติดตั้ง (APK):** [Google Drive](https://drive.google.com/drive/folders/1yFLliCkzkfb23EmcjzyVI88apgJccd5k?usp=sharing)
 
 ---
