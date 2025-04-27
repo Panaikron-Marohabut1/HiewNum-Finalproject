@@ -60,42 +60,6 @@ const HomeScreen = () => {
       setSelectedEntry(null);
     }
   };
-
-  // Get next reminder time (mock implementation)
-  const getNextReminderTime = () => {
-    if (!reminders.enabled) return null;
-
-    const now = moment();
-    const startTime = moment(reminders.startTime, 'HH:mm');
-    const endTime = moment(reminders.endTime, 'HH:mm');
-
-    // If current time is before start time, next reminder is at start time
-    if (now.isBefore(startTime)) {
-      return startTime.format('h:mm A');
-    }
-
-    // If current time is after end time, no more reminders today
-    if (now.isAfter(endTime)) {
-      return null;
-    }
-
-    // Calculate next reminder based on frequency
-    const minutesSinceStart = now.diff(startTime, 'minutes');
-    const reminderCycles = Math.floor(minutesSinceStart / reminders.frequency);
-    const nextReminderMinutes = (reminderCycles + 1) * reminders.frequency;
-    
-    const nextReminder = moment(startTime).add(nextReminderMinutes, 'minutes');
-    
-    // If next reminder is after end time, no more reminders
-    if (nextReminder.isAfter(endTime)) {
-      return null;
-    }
-
-    return nextReminder.format('h:mm A');
-  };
-
-  const nextReminder = getNextReminderTime();
-
   // Render Container Items
   const renderContainerItem = ({ item }) => (
     <ContainerButton 
@@ -144,11 +108,11 @@ const HomeScreen = () => {
         <WaterProgress />
 
         {/* Reminders Section */}
-        {reminders.enabled && nextReminder && (
+        {reminders.enabled && (
           <View style={styles.reminderContainer}>
             <MaterialCommunityIcons name="bell-ring-outline" size={20} color={COLORS.primary} />
             <Text style={styles.reminderText}>
-              Next reminder : {nextReminder}
+              Notifications enabled (Every 2 hours)
             </Text>
           </View>
         )}
@@ -451,4 +415,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen; 
+export default HomeScreen;
