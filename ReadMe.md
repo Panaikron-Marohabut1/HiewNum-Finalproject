@@ -41,7 +41,7 @@
 
 ---
 
-### 1.3 โครงร่างหน้าจอ | Mockup
+### 1.3 โครงร่างหน้าจอ | Mockup (รูปจะแสดงได้บน Github)
 
 #### หน้าหลัก (Home Screen)
 ![Home 1](assets/mockup-home1.png)  
